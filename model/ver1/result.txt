@@ -1,0 +1,7 @@
+Ultralytics 8.3.38 🚀 Python-3.10.12 torch-2.5.1+cu121 CUDA:0 (Tesla T4, 15102MiB)
+YOLO11m summary (fused): 303 layers, 20,030,803 parameters, 0 gradients, 67.6 GFLOPs
+val: Scanning /content/valid/labels.cache... 74 images, 0 backgrounds, 0 corrupt: 100%|██████████| 74/74 [00:00<?, ?it/s]
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████| 5/5 [00:04<00:00,  1.09it/s]
+                   all         74        149      0.829      0.716      0.803      0.481
+Speed: 0.4ms preprocess, 29.1ms inference, 0.0ms loss, 6.9ms postprocess per image
+Results saved to runs/detect/train32
