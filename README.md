@@ -8,4 +8,3 @@ srouce venv/bin/activate
 ```
 python server.py
 ```
-# lanyard_backend
