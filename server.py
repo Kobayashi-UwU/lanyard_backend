@@ -73,11 +73,13 @@ def process_image():
             binary_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         x, y, w, h = cv2.boundingRect(contours[0])
 
-        # Store the location and color, making sure to convert numpy types to Python types
+        # Convert to a list of (x, y) points
+        points = contours[0].reshape(-1, 2).tolist()
+
         segmented_found.append({
-            # Convert numpy types to Python types
             "location": [int(x), int(y), int(w), int(h)],
-            "color": median_color_rgb  # Store in RGB format
+            "color": median_color_rgb,  # Store in RGB format
+            "segmentation_points": points  # Store all segmentation points
         })
 
     end_time = time.time()  # End timing
